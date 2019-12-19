@@ -1,0 +1,72 @@
+{
+    "name": "SightCall",
+    "description": "SightCall remote support software enables live video streaming and remote access on mobile devices and desktops for customer service and tech support teams.",
+    "image": "http:\/\/kinlane-productions.s3.amazonaws.com\/screen-capture-api\/18750-sightcall.jpg",
+    "tags": [
+        "have api",
+        "networks"
+    ],
+    "created": "2019-12-19",
+    "modified": "2019-12-19",
+    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/sightcall\/master\/apis.json",
+    "specificationVersion": "0.14",
+    "apis": [
+        {
+            "name": "SightCall",
+            "description": null,
+            "image": "http:\/\/kinlane-productions.s3.amazonaws.com\/screen-capture-api\/18750-sightcall.jpg",
+            "humanURL": "http:\/\/www.sightcall.com\/",
+            "baseURL": "",
+            "tags": [],
+            "properties": [
+                {
+                    "type": "x-openapi",
+                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/1forge\/master\/sightcall-openapi.json"
+                },
+                {
+                    "type": "x-postman-collecction",
+                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/1forge\/master\/sightcall-postman-collection.json"
+                }
+            ]
+        }
+    ],
+    "include": [],
+    "x-common": [
+        {
+            "type": "Blog",
+            "url": "http:\/\/www.sightcall.com\/blog\/"
+        },
+        {
+            "type": "Blog RSS",
+            "url": "http:\/\/sightcall.com\/feed\/"
+        },
+        {
+            "type": "Crunchbase",
+            "url": "https:\/\/crunchbase.com\/organization\/weemo"
+        },
+        {
+            "type": "Developers",
+            "url": "http:\/\/www.sightcall.com\/developers\/"
+        },
+        {
+            "type": "Email",
+            "url": "sales-americas@sightcall.com"
+        },
+        {
+            "type": "Email",
+            "url": "sales-emea@sightcall.com"
+        },
+        {
+            "type": "Email",
+            "url": "sales-apac@sightcall.com"
+        },
+        {
+            "type": "Twitter",
+            "url": "https:\/\/twitter.com\/sightcall"
+        },
+        {
+            "type": "Website",
+            "url": "http:\/\/www.sightcall.com\/"
+        }
+    ]
+}
