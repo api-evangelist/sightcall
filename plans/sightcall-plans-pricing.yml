@@ -1,0 +1,29 @@
+generated: '2026-08-27'
+method: searched
+source: https://sightcall.com/pricing/
+plan_count: 0
+note: >-
+  SightCall publishes a pricing PAGE but no prices. The page presents three product tiers - Snap, Remote Visual
+  Support, and Xpert Knowledge - and ends every section with "Get in touch" or "Book a Demo" rather than a rate. No
+  currency, billing period, included quota, overage rate, or per-tier limit is stated anywhere on the page, and no
+  machine-readable pricing or catalog endpoint exists. This is enterprise contact-sales pricing: plan_count is 0
+  because SightCall publishes zero priced plans, not because the page was not read.
+pricing_model: contact-sales
+currency: null
+product_tiers:
+- name: Snap
+  description: Asynchronous photo and video capture and sharing workflow.
+  price: null
+  note: named on the pricing page; no price published
+- name: Remote Visual Support
+  description: Real-time AR-enhanced live video collaboration between agents and customers or technicians.
+  price: null
+  note: named on the pricing page; no price published
+- name: Xpert Knowledge
+  description: AI generation of step-by-step multimedia tutorials from recorded sessions.
+  price: null
+  note: named on the pricing page; no price published
+plans: []
+evidence:
+- url: https://sightcall.com/pricing/
+  status: 200

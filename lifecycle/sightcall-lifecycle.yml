@@ -1,0 +1,58 @@
+generated: '2026-08-27'
+method: searched
+source: https://status.sightcall.com/ + https://sightcall.com/service-level-commitment/ + https://sightcall.com/llms.txt
+note: >-
+  SightCall runs a public status page and publishes a Service Level Commitment. It does NOT publish a versioning
+  policy, a deprecation policy, or Sunset/Deprecation header behaviour on any public surface - the API reference that
+  would carry them sits behind the gated developer portal (docs.sightcall.com 307s to the admin console). No public
+  changelog or release-notes feed for the API was found; SDK release history is only visible indirectly through
+  CocoaPods version dates (see packages/). Because no deprecation policy is published, NO Deprecation pointer is
+  emitted.
+status_page:
+  present: true
+  url: https://status.sightcall.com/
+  status: 200
+  components:
+  - SightCall EU Platform
+  - SightCall US Platform
+  subscriptions:
+  - email
+  - rss
+  - atom
+  - json
+  - webhook
+  - slack
+  observed: 'All services operational; scheduled maintenance for SightCall infrastructure announced for 2026-09-01 (rescheduled from 2026-08-25). Last updated 2026-08-27.'
+sla:
+  present: true
+  url: https://sightcall.com/service-level-commitment/
+  status: 200
+  note: Public Service Level Commitment page. Uptime figures not extracted into this artifact.
+versioning:
+  policy_published: false
+  observed_scheme: path
+  observed_example: https://api.rtccloud.net/v2.0/
+  note: >-
+    A major.minor version segment appears in the documented REST base path (v2.0). SightCall publishes no written
+    versioning policy, no supported-version window, and no migration guidance on any public page.
+deprecation:
+  policy_published: false
+  sunset_header: unknown
+  deprecation_header: unknown
+  deprecated_operations: []
+  note: No deprecation policy, sunset window, or RFC 8594 header behaviour is published. No OpenAPI exists to derive deprecated operations from.
+changelog:
+  public_api_changelog: false
+  note: >-
+    No dated public API changelog or release-notes feed was found. SightCall's Help Center carries a "Latest versions
+    and downloads of the Apps, Plugins, and Integrations" article, but support.sightcall.com returns 403 to
+    non-browser clients and the article is not machine-readable.
+evidence:
+- url: https://status.sightcall.com/
+  status: 200
+- url: https://sightcall.com/service-level-commitment/
+  status: 200
+- url: https://docs.sightcall.com/gd/rest-api
+  status: 307
+- url: https://support.sightcall.com/hc/en-us
+  status: 403

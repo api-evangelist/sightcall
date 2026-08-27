@@ -1,23 +1,128 @@
 aid: sightcall
 name: SightCall
-description: 'SightCall is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+description: >-
+  SightCall is a San Francisco headquartered enterprise remote visual support platform. Its VISION product connects
+  experts, technicians and customers over live AR-enhanced WebRTC video so that field service, customer service,
+  insurance and telehealth teams can diagnose and resolve issues without an on-site visit. The platform layers computer
+  vision (defect detection, parts recognition, OCR of serial numbers, gauges and meter readings), AI session insights,
+  and Xpert Knowledge, which turns recorded sessions into structured step-by-step tutorials. SightCall ships iOS,
+  Android and Web client SDKs plus a REST API for session management, user provisioning, reporting and workflow
+  integration, and is embedded into Salesforce Service Cloud, Microsoft Dynamics 365, ServiceNow, SAP, Zendesk,
+  Genesys, Five9, NICE and Guidewire. The developer portal carrying the REST API reference and SDK documentation is
+  not public - SightCall directs developers to contact the company for access.
 url: https://raw.githubusercontent.com/api-evangelist/sightcall/refs/heads/main/apis.yml
+image: https://sightcall.com/wp-content/uploads/SightCall.jpg
 x-type: company
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
 specificationVersion: '0.20'
 created: '2026-08-27'
 modified: '2026-08-27'
 tags:
 - Company
-apis: []
+- Video
+- WebRTC
+- Remote Support
+- Field Service
+- Augmented Reality
+- Computer Vision
+- Customer Service
+- Insurance
+- Telehealth
+- Communications
+apis:
+- aid: sightcall:rest-api
+  name: SightCall REST API
+  description: >-
+    SightCall's REST API is used by application back ends to request session tokens, manage users and sessions,
+    provision providers and pull reporting. Authentication is by API key in the Authorization header. The full
+    reference lives on the SightCall developer portal, which is gated - docs.sightcall.com now redirects to the
+    admin console login and SightCall's own llms.txt says "contact SightCall for access".
+  humanURL: https://sightcall.com/platform/
+  baseURL: https://api.rtccloud.net/v2.0/
+  x-base-url-note: >-
+    The REST base is on rtccloud.net, not sightcall.com, and that is correct: rtccloud.net is SightCall's own
+    platform infrastructure domain (SightCall's roots are the RTCCloud/Weemo WebRTC platform), it is named as the
+    REST base by SightCall's own documentation at docs.sightcall.com/gd/rest-api, and the live VISION application at
+    vision.sightcall.com whitelists https://*.rtccloud.net in its Content-Security-Policy connect-src today. Both
+    domains also carry the same DNSSEC/SPF/DMARC posture (see security/sightcall-domain-security.yml). The host did
+    not answer an anonymous TLS connection during this pass, so nothing was harvested from it.
+  tags:
+  - Video
+  - WebRTC
+  - Remote Support
+  properties:
+  - type: Authentication
+    url: authentication/sightcall-authentication.yml
+  - type: RateLimits
+    url: rate-limits/sightcall-rate-limits.yml
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: TrustCenter
+  url: security/sightcall-trust-center.yml
+- type: DomainSecurity
+  url: security/sightcall-domain-security.yml
 - type: Website
-  url: https://forgeglobal.com/sightcall_stock/
+  url: https://sightcall.com/
+- type: Support
+  url: https://support.sightcall.com/
+- type: Blog
+  url: https://sightcall.com/blog/
+- type: GitHubOrganization
+  url: https://github.com/sightcall
+- type: Pricing
+  url: https://sightcall.com/pricing/
+- type: SignUp
+  url: https://get.sightcall.com/demo
+- type: TermsOfService
+  url: https://sightcall.com/terms-conditions/
+- type: PrivacyPolicy
+  url: https://sightcall.com/privacy-policy/
+- type: StatusPage
+  url: https://status.sightcall.com/
+- type: LLMsTxt
+  url: llms/sightcall-llms.txt
+- type: Packages
+  url: packages/sightcall-packages.yml
+- type: SDKs
+  url: packages/sightcall-packages.yml
+- type: Lifecycle
+  url: lifecycle/sightcall-lifecycle.yml
+- type: Conformance
+  url: conformance/sightcall-conformance.yml
+- type: Compliance
+  url: conformance/sightcall-conformance.yml
+- type: Conventions
+  url: conventions/sightcall-conventions.yml
+- type: Plans
+  url: plans/sightcall-plans-pricing.yml
+x-enrichment:
+  date: '2026-08-27'
+  status: enriched
+  artifacts_added: 11
+  pass: local-v1
+x-coverage:
+  state: gated
+  reason: customer-only-docs
+  detail: >-
+    SightCall's entire developer surface moved behind the tenant console - every path on docs.sightcall.com now
+    returns HTTP 307 to the admin.sightcall.com login, and SightCall's own llms.txt states the developer portal
+    requires contacting the company for access, so the REST API reference, SDK docs and any spec are unreadable
+    without a customer account.
+  evidence:
+  - url: https://docs.sightcall.com/gd/rest-api
+    status: 307
+  - url: https://docs.sightcall.com/gd/how-to/authenticate
+    status: 307
+  - url: https://sightcall.com/llms.txt
+    status: 200
+  - url: https://api.sightcall.com/openapi.json
+    status: 403
+  - url: https://sightcall.com/openapi.json
+    status: 404
+  - url: https://api.rtccloud.net/v2.0/
+    status: 0
+  checked: '2026-08-27'

@@ -1,0 +1,18 @@
+generated: '2026-08-27'
+method: searched
+probe: true
+source: https://trust.sightcall.com/
+url: https://trust.sightcall.com/
+certifications:
+- SOC 2
+- HIPAA
+- GDPR
+- CSA STAR
+evidence:
+- source: https://trust.sightcall.com/
+  keywords:
+  - soc 2
+  - hipaa
+  - trust center
+  - gdpr
+  - csa star

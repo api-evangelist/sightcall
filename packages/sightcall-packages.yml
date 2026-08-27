@@ -1,0 +1,83 @@
+generated: '2026-08-27'
+method: searched
+source: https://trunk.cocoapods.org/api/v1/pods/ + https://github.com/sightcall + https://sightcall.com/llms-full.txt
+note: >-
+  SightCall publishes iOS SDKs to the public CocoaPods trunk from its own GitHub organization
+  (github.com/sightcall/sightcallsdkpods, "Cocoapod repository for the SightCall SDKs"). The Android and Web SDKs are
+  named by SightCall's own llms-full.txt ("SDKs: iOS (Swift/Objective-C), Android (Kotlin), Web (JavaScript)") but are
+  NOT published to any public registry - a Maven Central search for com.sightcall.universal and for "sightcall"
+  returns 0 artifacts, and npm/PyPI have no SightCall packages. Those SDKs are distributed through the gated developer
+  portal, so no version or publish date can be read for them.
+registries_searched:
+- registry: cocoapods
+  result: 3 SightCall pods found
+- registry: npm
+  result: no packages (search "sightcall" returned 0; @sightcall/* 404)
+- registry: pypi
+  result: no packages (pypi.org/pypi/sightcall/json -> 404)
+- registry: maven-central
+  result: no artifacts (g:com.sightcall.universal -> numFound 0; q=sightcall -> numFound 0)
+packages:
+- name: LSUniversalSDK
+  registry: cocoapods
+  official: true
+  language: Objective-C/Swift
+  platform: iOS
+  url: https://cocoapods.org/pods/LSUniversalSDK
+  version: 5.6.0
+  published: '2025-04-10'
+  version_count: 31
+  note: The SightCall Universal SDK for iOS - the primary iOS client library.
+- name: SightCallVisionSDK
+  registry: cocoapods
+  official: true
+  language: Swift
+  platform: iOS
+  url: https://cocoapods.org/pods/SightCallVisionSDK
+  version: 5.6.0
+  published: '2025-04-10'
+  version_count: 5
+  note: iOS SDK for the SightCall VISION product line. Sample app at github.com/sightcall/visionsdktestapp.
+- name: LSUniversalBroadcastSDK
+  registry: cocoapods
+  official: true
+  language: Objective-C/Swift
+  platform: iOS
+  url: https://cocoapods.org/pods/LSUniversalBroadcastSDK
+  version: 5.4.2
+  published: '2024-11-08'
+  version_count: 3
+  note: Broadcast-extension companion SDK for iOS screen sharing.
+- name: com.sightcall.universal:universal-sdk
+  registry: none
+  official: true
+  language: Kotlin/Java
+  platform: Android
+  url: https://github.com/sightcall/Android-Vision-Demo
+  version: null
+  published: null
+  note: >-
+    SightCall's Android Universal SDK. Named in SightCall's own SDK material and in third-party integrations, but it is
+    not on Maven Central or any other public registry - the AAR is distributed through SightCall's gated developer
+    portal, so a consumer cannot resolve a version from a public source and neither can this probe.
+- name: SightCall Web SDK (JavaScript)
+  registry: none
+  official: true
+  language: JavaScript
+  platform: Web
+  url: https://docs.sightcall.com/
+  version: null
+  published: null
+  note: >-
+    Browser/JavaScript SDK named by SightCall's llms-full.txt. Not on npm (checked "sightcall", "sightcall-sdk",
+    "@sightcall/sdk", "@sightcall/vision-sdk" - all 404) and not distributed from a pinned public CDN URL we could
+    read, so no version is resolvable. Documentation is behind the gated developer portal.
+sample_repositories:
+- url: https://github.com/sightcall/lsuniversalsdktestapp
+  note: iOS sample app for LSUniversalSDK (last pushed 2025-08-11)
+- url: https://github.com/sightcall/Android-Vision-Demo
+  note: Android VISION demo (last pushed 2025-05-15)
+- url: https://github.com/sightcall/Android-Classic-Demo
+  note: Android Classic demo (last pushed 2025-05-23)
+- url: https://github.com/sightcall/visionsdktestapp
+  note: iOS VISION SDK sample (last pushed 2025-03-04)

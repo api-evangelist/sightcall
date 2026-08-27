@@ -1,0 +1,105 @@
+generated: '2026-08-27'
+method: searched
+source: https://trust.sightcall.com/ + https://sightcall.com/platform/security/ + https://sightcall.com/llms.txt
+note: >-
+  SightCall's conformance posture is strong on the COMPLIANCE axis (audited certifications published through a live
+  trust center) and effectively unmeasurable on the API-STANDARDS axis, because no machine-readable contract is
+  published. Every API-standard entry below is marked conforms:false with the honest reason "no published contract to
+  assert it against" rather than being guessed from marketing copy. The domain-standard slot is left empty on purpose:
+  the remote-visual-support / video-assistance market has no ratified interoperability standard for this pipeline to
+  probe, and REWARD-ONLY means an empty slot is correct rather than penalised.
+compliance:
+- id: soc2
+  name: SOC 2 (Type II)
+  conforms: true
+  evidence: https://trust.sightcall.com/ - SOC 2 report available through the trust center; SightCall also publishes https://sightcall.com/soc-2-certified-remote-visual-support/ (200).
+- id: soc3
+  name: SOC 3
+  conforms: true
+  evidence: https://trust.sightcall.com/ - SOC 3 audit report listed.
+- id: csa-star
+  name: CSA STAR Level 1
+  conforms: true
+  evidence: https://trust.sightcall.com/ - CSA STAR Level 1 with CAIQ self-assessment available.
+- id: hipaa
+  name: HIPAA
+  conforms: true
+  evidence: https://trust.sightcall.com/ and https://sightcall.com/platform/security/hipaa-compliance/
+- id: gdpr
+  name: GDPR
+  conforms: true
+  evidence: https://trust.sightcall.com/ and https://sightcall.com/gdpr-policy/ (200)
+- id: ccpa
+  name: CCPA
+  conforms: true
+  evidence: https://trust.sightcall.com/ and https://sightcall.com/ccpa-policy/
+- id: cpra
+  name: CPRA
+  conforms: true
+  evidence: https://trust.sightcall.com/ - CPRA listed alongside CCPA.
+- id: iso-27001
+  name: ISO/IEC 27001
+  conforms: false
+  evidence: Not listed on https://trust.sightcall.com/. SightCall publishes SOC 2/SOC 3/CSA STAR instead.
+- id: pci-dss
+  name: PCI DSS
+  conforms: false
+  evidence: Not listed; SightCall does not process cardholder data as part of the platform.
+- id: fedramp
+  name: FedRAMP
+  conforms: false
+  evidence: Not listed on the trust center.
+api_standards:
+- id: openapi
+  name: OpenAPI
+  conforms: false
+  evidence: No OpenAPI/Swagger document is published on any SightCall host. Probed /openapi.json, /openapi.yaml, /swagger.json, /v1/openapi.json, /api-docs, /redoc against sightcall.com (404), api.sightcall.com (403), docs.sightcall.com (307 to console), admin.sightcall.com and vision.sightcall.com (200 SPA shell, not a spec), api.rtccloud.net (no response).
+- id: asyncapi
+  name: AsyncAPI
+  conforms: false
+  evidence: No AsyncAPI document found. SightCall's llms-full.txt mentions "API and webhook support for custom workflows" but publishes no webhook catalog, event names, or payload schemas.
+- id: graphql
+  name: GraphQL
+  conforms: false
+  evidence: No /graphql surface found on any SightCall host.
+- id: mcp
+  name: Model Context Protocol
+  conforms: false
+  evidence: No hosted or local MCP server published by SightCall was found on the site, in the GitHub org, or in registry searches.
+- id: a2a
+  name: A2A Agent Card
+  conforms: false
+  evidence: /.well-known/agent-card.json and /.well-known/agent.json miss on every host - 404 on sightcall.com, 403 on api.sightcall.com, 307 on docs.sightcall.com, SPA shell 200s on admin. and vision.sightcall.com.
+- id: rfc9457
+  name: RFC 9457 Problem Details
+  conforms: false
+  evidence: No published contract or error reference to assert against.
+- id: oauth2
+  name: OAuth 2.0
+  conforms: false
+  evidence: REST API authenticates with an API key in the Authorization header ("Apikey <key>"), not OAuth. No authorization-server metadata document is served.
+- id: oidc
+  name: OpenID Connect
+  conforms: false
+  partial: true
+  evidence: >-
+    OIDC is offered for CONSOLE single sign-on per https://sightcall.com/platform/security/, but no
+    /.well-known/openid-configuration is served on any SightCall host and OIDC is not the API authentication model.
+- id: webrtc
+  name: WebRTC
+  conforms: true
+  evidence: >-
+    SightCall's platform is WebRTC-based - its own llms.txt states customers join with "No download required for
+    customers via WebRTC browser link", and its historical reference implementations (github.com/sightcall/rtcc-integration)
+    are WebRTC clients. This is a transport-protocol conformance, not a machine-readable API contract.
+- id: rfc9116
+  name: RFC 9116 security.txt
+  conforms: false
+  evidence: /.well-known/security.txt returns 404 on sightcall.com and is not served on any other SightCall host.
+domain_standard:
+  present: false
+  note: >-
+    The remote visual support / AR field-service market has no ratified domain interoperability standard (no SCIM-,
+    OData-, FHIR-, OpenRTB-class schema applies to live video assistance sessions). Reward-only: nothing is asserted.
+    SightCall's real interoperability surface is bilateral platform integration (Salesforce Service Cloud, Dynamics
+    365, ServiceNow, SAP FSM, Genesys, Five9, NICE, Zendesk, Guidewire, CCC), each a vendor-specific connector.

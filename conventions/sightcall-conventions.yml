@@ -1,0 +1,83 @@
+generated: '2026-08-27'
+method: searched
+source: https://sightcall.com/llms.txt + https://sightcall.com/llms-full.txt + https://docs.sightcall.com/ (gated, 307) + publicly indexed text of SightCall's own REST API pages
+note: >-
+  This is a deliberately thin conventions record. SightCall has a real REST API - its own llms-full.txt says
+  "REST API: Available for session management, user provisioning, reporting, and workflow integration" - but the
+  reference that defines its cross-cutting semantics is behind the gated developer portal. Every field below is
+  either evidenced from a public SightCall surface or explicitly marked unknown-because-gated. Nothing is inferred
+  from what a video API "usually" does.
+auth_style:
+  scheme: api-key-header
+  header: 'Authorization: Apikey <API_KEY>'
+  user_credential: '<appId>/<token>'
+  see: authentication/sightcall-authentication.yml
+  confidence: medium
+versioning:
+  style: path
+  example: https://api.rtccloud.net/v2.0/
+  policy_published: false
+  see: lifecycle/sightcall-lifecycle.yml
+idempotency:
+  supported: unknown
+  header: null
+  scope: null
+  retention: null
+  note: >-
+    No idempotency key, header, or retry-safety guidance is published on any public SightCall surface. Marked unknown
+    rather than false - the gated reference may document one. NO Idempotency pointer is emitted in apis.yml, because
+    the pointer would assert a capability we cannot see.
+pagination:
+  style: unknown
+  params: []
+  response_fields: []
+  note: Not published on any public surface.
+field_expansion:
+  supported: unknown
+sparse_fields:
+  supported: unknown
+metadata:
+  supported: unknown
+request_id_tracing:
+  header: unknown
+  note: No request-id or correlation-id convention is published.
+error_envelope:
+  format: unknown
+  rfc9457: false
+  note: No public error reference. See conformance/sightcall-conformance.yml.
+rate_limit_signaling:
+  headers: []
+  exhaustion_status: unknown
+  see: rate-limits/sightcall-rate-limits.yml
+webhooks:
+  mentioned: true
+  catalog_published: false
+  note: >-
+    SightCall's own llms-full.txt states "API and webhook support for custom workflows", but publishes no event
+    catalog, event names, payload schemas, signing scheme, or retry policy. Because there is no published webhook
+    catalog to point at, NO Webhooks pointer and no asyncapi/ artifact are emitted.
+reversibility:
+  grade: undetermined
+  write_surface_present: true
+  write_surface_evidence: >-
+    SightCall's llms-full.txt names the REST API's write scope explicitly - "session management, user provisioning,
+    reporting, and workflow integration" - so this is not a read-only API and reversibility is NOT `na`.
+  operations: []
+  windows: []
+  note: >-
+    No reversal operation (cancel, delete, revoke, restore, undo) and no reversal WINDOW is stated on any public
+    SightCall surface. The REST reference that would name them is gated (docs.sightcall.com -> 307 ->
+    admin.sightcall.com). Recorded as undetermined rather than `documented` or `na`: asserting a reversal path we
+    cannot see would be a fabrication, and asserting `na` would falsely claim SightCall has no write surface. The
+    only reversal-adjacent public commitment is data deletion under the GDPR and CCPA policies
+    (https://sightcall.com/gdpr-policy/, https://sightcall.com/ccpa-policy/), which are legal data-subject rights,
+    not an API operation with an operationId and a window.
+dry_run_mode:
+  supported: unknown
+  note: Not published.
+cross_links:
+  authentication: authentication/sightcall-authentication.yml
+  lifecycle: lifecycle/sightcall-lifecycle.yml
+  rate_limits: rate-limits/sightcall-rate-limits.yml
+  conformance: conformance/sightcall-conformance.yml
+  packages: packages/sightcall-packages.yml

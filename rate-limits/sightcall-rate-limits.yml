@@ -1,0 +1,25 @@
+generated: '2026-08-27'
+method: searched
+source: https://sightcall.com/llms.txt + https://sightcall.com/llms-full.txt + https://docs.sightcall.com/ (307 to console login)
+limit_count: 0
+note: >-
+  SightCall publishes no rate limits. The REST API reference that would carry them is behind the gated developer
+  portal - docs.sightcall.com returns 307 to https://admin.sightcall.com/ for every path, and SightCall's own
+  llms.txt says the developer portal requires contacting the company. Neither sightcall.com/llms.txt nor
+  llms-full.txt names a quota, throttle, burst, or 429 behaviour. api.rtccloud.net, the documented REST base, did
+  not answer a connection attempt, so no live response headers could be observed either. This is a recorded absence,
+  not an unchecked field.
+rate_limits: []
+response_headers: []
+exhaustion_status: null
+observed: false
+evidence:
+- url: https://docs.sightcall.com/gd/rest-api
+  status: 307
+  note: redirects to https://admin.sightcall.com/
+- url: https://sightcall.com/llms.txt
+  status: 200
+  note: no rate-limit content
+- url: https://api.rtccloud.net/v2.0/
+  status: <no response>
+  note: TLS connection timed out; one attempt, not retried

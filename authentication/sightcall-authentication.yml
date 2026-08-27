@@ -1,0 +1,55 @@
+generated: '2026-08-27'
+method: searched
+source: https://docs.sightcall.com/gd/how-to/authenticate (page is now gated - 307 to https://admin.sightcall.com/; detail below is from the publicly indexed version of SightCall's own documentation)
+docs: https://docs.sightcall.com/gd/how-to/authenticate
+note: >-
+  SightCall's REST API authentication model is documented on the company's own developer documentation site, which as
+  of 2026-08-27 is no longer publicly reachable: every path under docs.sightcall.com returns HTTP 307 to
+  https://admin.sightcall.com/, the console login. SightCall's own llms.txt confirms the posture - "Developer Portal:
+  SDK documentation for iOS, Android, and Web. REST API reference and integration guides. (Contact SightCall for
+  access.)" The scheme recorded here is taken from the publicly indexed text of SightCall's own authenticate and
+  rest-api pages; it is NOT derived from an OpenAPI (none is published) and it could not be re-verified against a
+  live document. No OAuth 2.0 or OpenID Connect surface is documented for the REST API, so no scopes/ artifact is
+  written. SAML/OIDC SSO is offered for END-USER console login (per sightcall.com/platform/security/), which is a
+  different surface from API authentication.
+verification:
+  live_docs_reachable: false
+  docs_status: 307
+  redirect_to: https://admin.sightcall.com/
+  openapi_available: false
+security_schemes:
+- id: apiKeyHeader
+  type: apiKey
+  in: header
+  name: Authorization
+  scheme_format: 'Authorization: Apikey <API_KEY>'
+  description: >-
+    Application back ends authenticate to the SightCall REST API with an API key in the Authorization header. The API
+    key is the concatenation of the Authentication API Client Identifier and the Authentication API Client Secret.
+  applies_to: provider/back-end REST methods
+  confidence: medium
+  evidence: SightCall documentation (docs.sightcall.com/gd/how-to/authenticate), publicly indexed; page now gated.
+- id: userToken
+  type: apiKey
+  in: header
+  name: Authorization
+  scheme_format: '<appId>/<token>'
+  description: >-
+    Client/user authentication uses a token minted by the back end through the provider REST API. The user credential
+    is the appId and the token joined by a forward slash. Tokens are requested per user UID and domain.
+  applies_to: end-user/client SDK sessions
+  confidence: medium
+  evidence: SightCall documentation (docs.sightcall.com/gd/rest-api, gd/how-to/authenticate), publicly indexed.
+key_management:
+  where_to_find: SightCall admin console (https://admin.sightcall.com/) - per the SightCall Help Center article "Where can I find my SightCall API Key?"
+  rotation_policy: not published
+oauth:
+  present: false
+  note: No OAuth 2.0 / OIDC authorization server is documented or discoverable for the SightCall REST API. /.well-known/oauth-authorization-server and /.well-known/openid-configuration miss on every SightCall host (see well-known/sightcall-well-known.yml).
+sso:
+- protocol: SAML
+  scope: console/user sign-in (not API auth)
+  source: https://sightcall.com/platform/security/
+- protocol: OIDC
+  scope: console/user sign-in (not API auth)
+  source: https://sightcall.com/platform/security/

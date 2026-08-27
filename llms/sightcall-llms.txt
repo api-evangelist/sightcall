@@ -1,0 +1,85 @@
+# SightCall: Remote Visual Support Platform
+
+> SightCall VISION is an enterprise remote visual support platform that connects experts, technicians, and customers through live AR-enhanced video. Teams use it to diagnose and resolve issues in real time, capture frontline expertise as reusable knowledge, and apply AI-powered visual inspection, all without requiring on-site visits.
+
+## Platform
+
+- [Platform Overview](https://sightcall.com/platform/): SightCall VISION: the all-in-one visual AI platform for modern service teams, combining remote visual support, AI insights, and knowledge capture.
+- [Remote Visual Support](https://sightcall.com/platform/remote-visual-support/): Live HD video with AR annotations, screen sharing, snapshot capture, remote camera control, and multi-party calls. No download required for customers via WebRTC browser link.
+- [Insights](https://sightcall.com/platform/insights/): AI analyzes live sessions to surface trends, identify knowledge gaps, and help service leaders make faster, more informed decisions.
+- [Xpert Knowledge](https://sightcall.com/platform/xpert-knowledge/): Automatically converts recorded sessions into structured, step-by-step multimedia tutorials. Scales institutional expertise to technicians and AI agents without extra effort from service teams.
+- [Visual AI](https://sightcall.com/platform/visual-ai/): Computer vision for real-time defect detection, parts recognition, object classification, and automated data capture (OCR for serial numbers, gauges, meter readings).
+- [Security & Compliance](https://sightcall.com/platform/security/): SOC 2 Type II, HIPAA, GDPR, and CCPA compliance. Encrypted video transmission and storage, role-based access, SAML/OIDC SSO, and full audit traceability.
+- [Trust Center](https://trust.sightcall.com/): Live compliance status and security documentation.
+
+## Solutions
+
+- [Field Service](https://sightcall.com/solutions/field-service/): Increase first-time fix rates, reduce truck rolls, and enable remote factory acceptance testing (FAT). Measured outcomes: +20% first call resolution, -50% truck rolls, -69% average resolution time.
+- [Customer Service](https://sightcall.com/solutions/customer-service/): Level 1 and Level 2 support teams resolve issues remotely with live video and AR guidance, reducing average handle time and escalations.
+- [Insurance](https://sightcall.com/solutions/insurance/): Remote loss adjustment, real-time damage assessment, and authenticated evidence collection with GPS and timestamp verification. Supports both live and asynchronous (SightCall Snap) workflows.
+- [Telehealth](https://sightcall.com/solutions/telehealth/): HIPAA-compliant remote support for medical device installation, maintenance, and clinical assistance.
+- [Field Service Savings Calculator](https://sightcall.com/field-service-savings-calculator/): Estimate ROI from reduced truck rolls and faster resolution times.
+
+## Integrations
+
+- [All Integrations](https://sightcall.com/integrations/): Full integration catalog. SightCall VISION works in standalone mode or embedded in existing CRM, FSM, and CCaaS workflows.
+- [Salesforce](https://sightcall.com/integrations/salesforce/): Native integration with Salesforce Service Cloud (strategic partner).
+- [Microsoft Dynamics 365](https://sightcall.com/integrations/microsoft-dynamics-365/): Embedded visual support inside the Dynamics 365 ecosystem.
+- [ServiceNow](https://sightcall.com/integrations/servicenow/): FSM integration for field service workflows.
+- [SAP](https://sightcall.com/integrations/sap/): Available on SAP Store; integrates with SAP Field Service Management.
+- [Google Gemini](https://sightcall.com/integrations/gemini/): Gemini Live API integration for real-time AI intelligence during service interactions.
+- [NICE](https://sightcall.com/integrations/nice/): Contact center integration (strategic partner and reseller).
+- [Genesys](https://sightcall.com/integrations/genesys/): CCaaS integration (strategic partner).
+- [Five9](https://sightcall.com/integrations/five9/): Contact center platform integration (strategic partner).
+- [Odigo](https://sightcall.com/integrations/odigo/): Cloud-native CCaaS platform integration for enterprise omnichannel contact centers.
+- [Zendesk](https://sightcall.com/integrations/zendesk/): CRM integration for customer support teams.
+- [ServiceMax](https://sightcall.com/integrations/servicemax/): FSM integration.
+- [Accenture](https://sightcall.com/integrations/accenture/): Global reseller partnership; joint deployments in telecommunications and manufacturing.
+- [Guidewire](https://sightcall.com/integrations/guidewire/): Insurance platform integration.
+- [Cotality (formerly CoreLogic / Symbility)](https://sightcall.com/integrations/cotality/): Insurance claims platform integration (strategic partner).
+- [CCC](https://sightcall.com/integrations/ccc/): Automotive insurance claims integration on the CCC ONE platform, covering FNOL through repair.
+- [Munich Re](https://sightcall.com/integrations/munich-re/): Remote Inspection Solution for real-time insurance claim inspection and settlement.
+- [RDT](https://sightcall.com/integrations/rdt/): UK insurance software platform integration (Atlas suite).
+- [RealWear](https://sightcall.com/integrations/realwear/): Smart glasses integration for hands-free field use.
+- [Vuzix](https://sightcall.com/integrations/vuzix/): Smart glasses wearable integration.
+
+## Developer Resources
+
+- **Developer Portal:** SDK documentation for iOS, Android, and Web. REST API reference and integration guides. (Contact SightCall for access.)
+- [Support Portal](https://support.sightcall.com): Customer support knowledge base and ticket submission.
+
+## Customer Proof
+
+- [Customers](https://sightcall.com/customers/): Enterprise customers include Ford, Sony, GE Healthcare, Canon, Lavazza, Legrand, Sedgwick, Whirlpool, Deutsche Telekom, Konica Minolta, Valeo, and others.
+- [Case Studies](https://sightcall.com/case-studies/): Detailed outcomes from Apria Healthcare, GE Healthcare, Allianz, Koenig & Bauer, WashTec, Posti, and others.
+- [GE Healthcare Case Study](https://sightcall.com/case-studies/ge-healthcare/): Improved medical device field service efficiency.
+- [Apria Healthcare Case Study](https://sightcall.com/case-studies/apria-healthcare/): Remote patient and medical equipment support.
+
+## Company
+
+- [About Us](https://sightcall.com/about/): SightCall is headquartered in San Francisco and operates globally, serving enterprise service organizations across manufacturing, healthcare, insurance, and field service.
+- [Pricing](https://sightcall.com/pricing/): Plan overview and feature comparison.
+- [Careers](https://sightcall.com/careers/): Open roles at SightCall.
+- [Contact Us](https://sightcall.com/contact-us/): Sales and partnership inquiries.
+- [Get a Demo](https://get.sightcall.com/demo): Request a personalized product demo.
+- [Watch Field Service Demo](https://get.sightcall.com/field-service-demo-video): Deliver faster resolutions, capture expert knowledge automatically, and uncover operational insights from every support interaction.
+- [Watch Customer Service Demo](https://get.sightcall.com/customer-service-demo-video): Deliver exceptional CX with embedded remote visual support.
+- [Watch Insurance Demo](https://get.sightcall.com/insurance-demo-video): Improve customer satisfaction and settlement outcomes with accurate remote claim assessments.
+- [Watch Telehealth Demo](https://get.sightcall.com/telehealth-demo-video): Personalized video communication software that integrates seamlessly into your existing virtual care ecosystem
+- [Blog](https://sightcall.com/blog/): Product updates, field service trends, and thought leadership.
+- [Resource Library](https://sightcall.com/resources/): White papers, webinars, and research reports.
+
+## Resources
+- [White Paper: Why AI Fails in Field Service: The Blind Spot No One Talks About](https://sightcall.com/resources/why-ai-fails-in-field-service-the-blind-spot-no-one-talks-about/)
+
+## Optional
+
+- [GDPR Policy](https://sightcall.com/gdpr-policy/)
+- [HIPAA Compliance](https://sightcall.com/platform/security/hipaa-compliance/)
+- [CCPA Policy](https://sightcall.com/ccpa-policy/)
+- [SOC 2 Certification](https://sightcall.com/soc-2-certified-remote-visual-support/)
+- [Terms & Conditions](https://sightcall.com/terms-conditions/)
+- [Privacy Policy](https://sightcall.com/privacy-policy/)
+- [Service Level Commitment](https://sightcall.com/service-level-commitment/)
+- [Open Source Licenses](https://sightcall.com/open-source-licenses/)
+- [Full Technical Documentation](https://sightcall.com/llms-full.txt)

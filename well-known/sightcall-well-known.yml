@@ -1,0 +1,163 @@
+generated: '2026-08-27'
+method: probed
+source: live GET probes of /.well-known/* on every SightCall host in apis.yml
+note: >-
+  No SightCall host serves any /.well-known/ document. sightcall.com returns a genuine 404 for every path.
+  admin.sightcall.com (the Ember admin console) and vision.sightcall.com (the VISION SPA) answer 200 with their
+  application HTML shell for EVERY path including /openapi.json and /llms.txt - these are single-page-app catch-alls,
+  not documents, and are recorded as misses. api.sightcall.com returns 403 for every path. api.rtccloud.net, the
+  documented REST base host, did not complete a TLS connection on any attempt (recorded as no response; one attempt
+  per URL, not retried). Because nothing returned a real document, NO WellKnown or SecurityTxt pointer is emitted -
+  this file records a verified absence.
+hosts:
+- host: sightcall.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+    file: null
+  - path: /.well-known/openid-configuration
+    status: 404
+    file: null
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+    file: null
+  - path: /.well-known/api-catalog
+    status: 404
+    file: null
+  - path: /.well-known/ai-plugin.json
+    status: 404
+    file: null
+  - path: /.well-known/agent-card.json
+    status: 404
+    file: null
+  - path: /.well-known/agent.json
+    status: 404
+    file: null
+- host: api.sightcall.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 403
+    file: null
+  - path: /.well-known/openid-configuration
+    status: 403
+    file: null
+  - path: /.well-known/oauth-authorization-server
+    status: 403
+    file: null
+  - path: /.well-known/api-catalog
+    status: 403
+    file: null
+  - path: /.well-known/ai-plugin.json
+    status: 403
+    file: null
+  - path: /.well-known/agent-card.json
+    status: 403
+    file: null
+  - path: /.well-known/agent.json
+    status: 403
+    file: null
+- host: docs.sightcall.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 307
+    file: null
+    note: 307 redirect to https://admin.sightcall.com/ - the docs host redirects every path to the console login.
+  - path: /.well-known/openid-configuration
+    status: 307
+    file: null
+  - path: /.well-known/oauth-authorization-server
+    status: 307
+    file: null
+  - path: /.well-known/api-catalog
+    status: 307
+    file: null
+  - path: /.well-known/ai-plugin.json
+    status: 307
+    file: null
+  - path: /.well-known/agent-card.json
+    status: 307
+    file: null
+  - path: /.well-known/agent.json
+    status: 307
+    file: null
+- host: admin.sightcall.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 200
+    file: null
+    note: SPA shell (Ember "SightCall Admin" HTML), not a document - counted as a miss.
+  - path: /.well-known/openid-configuration
+    status: 200
+    file: null
+    note: SPA shell, not a document.
+  - path: /.well-known/oauth-authorization-server
+    status: 200
+    file: null
+    note: SPA shell, not a document.
+  - path: /.well-known/api-catalog
+    status: 200
+    file: null
+    note: SPA shell, not a document.
+  - path: /.well-known/ai-plugin.json
+    status: 200
+    file: null
+    note: SPA shell, not a document.
+  - path: /.well-known/agent-card.json
+    status: 200
+    file: null
+    note: SPA shell, not a document.
+  - path: /.well-known/agent.json
+    status: 200
+    file: null
+    note: SPA shell, not a document.
+- host: vision.sightcall.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 200
+    file: null
+    note: VISION SPA shell, not a document - counted as a miss.
+  - path: /.well-known/openid-configuration
+    status: 200
+    file: null
+    note: SPA shell, not a document.
+  - path: /.well-known/oauth-authorization-server
+    status: 200
+    file: null
+    note: SPA shell, not a document.
+  - path: /.well-known/api-catalog
+    status: 200
+    file: null
+    note: SPA shell, not a document.
+  - path: /.well-known/ai-plugin.json
+    status: 200
+    file: null
+    note: SPA shell, not a document.
+  - path: /.well-known/agent-card.json
+    status: 200
+    file: null
+    note: SPA shell, not a document.
+  - path: /.well-known/agent.json
+    status: 200
+    file: null
+    note: SPA shell, not a document.
+- host: api.rtccloud.net
+  documents:
+  - path: /.well-known/security.txt
+    status: <no response>
+    file: null
+    note: TLS connection timed out. One attempt, not retried.
+  - path: /.well-known/openid-configuration
+    status: <no response>
+    file: null
+  - path: /.well-known/oauth-authorization-server
+    status: <no response>
+    file: null
+  - path: /.well-known/api-catalog
+    status: <no response>
+    file: null
+  - path: /.well-known/agent-card.json
+    status: <no response>
+    file: null
+  - path: /.well-known/agent.json
+    status: <no response>
+    file: null
