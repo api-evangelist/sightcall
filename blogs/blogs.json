@@ -1,0 +1,14 @@
+{
+  "repo": "sightcall",
+  "feeds": [
+    {
+      "source": "https://support.sightcall.com/",
+      "feed_url": "https://support.sightcall.com/",
+      "title": "",
+      "saved": 0,
+      "method": "none"
+    }
+  ],
+  "post_count": 0,
+  "fetched": "2026-08-30T22:33:40Z"
+}
