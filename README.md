@@ -64,5 +64,113 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-SightCall is a company surfaced via the API Evangelist harvest backlog (source: secondary-market) and added to the network as a stub for full-pipeline profiling.
-- https://forgeglobal.com/sightcall_stock/
+SightCall is a San Francisco headquartered enterprise remote visual support platform. Its VISION product connects experts, technicians and customers over live AR-enhanced WebRTC video so that field service, customer service, insurance and telehealth teams can diagnose and resolve issues without an on-site visit. The platform layers computer vision (defect detection, parts recognition, OCR of serial numbers, gauges and meter readings), AI session insights, and Xpert Knowledge, which turns recorded sessions into structured step-by-step tutorials. SightCall ships iOS, Android and Web client SDKs plus a REST API for session management, user provisioning, reporting and workflow integration, and is embedded into Salesforce Service Cloud, Microsoft Dynamics 365, ServiceNow, SAP, Zendesk, Genesys, Five9, NICE and Guidewire. The developer portal carrying the REST API reference and SDK documentation is not public - SightCall directs developers to contact the company for access.
+
+**Areas:** Company · Video · WebRTC · Remote Support · Field Service Management · Augmented Reality · Computer Vision · Customer Service · Insurance · Telehealth · Communications
+
+## SightCall on APIs.io
+
+Everything profiled for SightCall is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/sightcall/](https://apis.io/providers/sightcall/)** — or go straight to one of the APIs or properties below.
+
+### APIs (1)
+
+- [SightCall REST API](https://apis.io/apis/sightcall/rest-api/) — SightCall's REST API is used by application back ends to request session tokens, manage users and sessions, provision providers and pull reporting.…
+
+### Published properties
+
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### MCP servers (1)
+
+Model Context Protocol servers that expose the API to agents.
+
+- [sightcall](https://apis.io/servers/sightcall/sightcall/)
+
+#### Security (3)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Sightcall Authentication](https://apis.io/security/sightcall/sightcall-authentication/)
+- [Sightcall Domain Security](https://apis.io/security/sightcall/sightcall-domain-security/)
+- [Sightcall Trust Center](https://apis.io/security/sightcall/sightcall-trust-center/)
+
+#### Plans and pricing (1)
+
+Published plans, tiers and prices.
+
+- [Sightcall Plans Pricing](https://apis.io/plans/sightcall/sightcall-plans-pricing/)
+
+#### Rate limits (1)
+
+Published request limits.
+
+- [Sightcall Rate Limits](https://apis.io/rate-limits/sightcall/sightcall-rate-limits/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://sightcall.com/)
+- [Pricing](https://sightcall.com/pricing/)
+- [Sign up](https://get.sightcall.com/demo)
+- [Support](https://support.sightcall.com/)
+- [Blog](https://sightcall.com/blog/)
+- [Terms of service](https://sightcall.com/terms-conditions/)
+- [Privacy policy](https://sightcall.com/privacy-policy/)
+- [GitHub](https://github.com/sightcall)
+- [Status](https://status.sightcall.com/)
+
+## API Evangelist rating
+
+**Kin Score 27.4** — thin · rubric 0.25.0 · scored 2026-10-23
+
+| Facet | Score |
+|---|---|
+| Discoverability | 75.0 |
+| Contract quality | 0.0 |
+| Contract governance | 0.0 |
+| Operational transparency | 10.5 |
+| Developer ergonomics | 26.2 |
+| Access clarity | 60.5 |
+
+**Agent readiness 13.7** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | verified |
+| Auth Clarity | bearer (partial credit) |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | documented (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+| Pagination Ratio | na |
+| Operation Distinctiveness | na |
+
+**Regulatory alignment 24.6** — Insurance
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/sightcall/](https://apis.io/providers/sightcall/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for SightCall: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/sightcall/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
